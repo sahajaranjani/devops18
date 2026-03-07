@@ -23,6 +23,16 @@ status = "Enabled"
 }
 }
 
+terraform {
+backend "s3" {
+region = "us-east-2"
+bucket = "sahaja.flm.monobucket"
+key = "prod/terraform.tfstate"
+}
+}
+
+
+
 
 
 
