@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "one" {
-  bucket = "sahaja.flm.monobucket"
+  bucket = "sahajaranjani.flm.monobucket1"
 }
 
 resource "aws_s3_bucket_ownership_controls" "two" {
@@ -20,14 +20,6 @@ resource "aws_s3_bucket_versioning" "three" {
 bucket = aws_s3_bucket.one.id
 versioning_configuration {
 status = "Enabled"
-}
-}
-
-terraform {
-backend "s3" {
-region = "us-east-2"
-bucket = "sahaja.flm.monobucket"
-key = "prod/terraform.tfstate"
 }
 }
 
