@@ -26,8 +26,8 @@ resource "aws_launch_template" "web_server_as" {
       Name = "terraform-elb"
     }
   }
-resource "aws_autoscaling_group" "web_server_asg" {
-    name                 = "web-server-asg"
+resource "aws_autoscaling_group" "web_server_asg_devops" {
+    name                 = "web-server-asg_devops"
     min_size             = 1
     max_size             = 3
     desired_capacity     = 2
